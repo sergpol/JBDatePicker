@@ -248,6 +248,7 @@ class JBDatePickerContentVC: UIViewController, UIScrollViewDelegate {
     // MARK: - UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.contentOffset.y = 0.0
         
         let page = Int(floor((scrollView.contentOffset.x -
             scrollView.frame.width / 2) / scrollView.frame.width) + 1)
